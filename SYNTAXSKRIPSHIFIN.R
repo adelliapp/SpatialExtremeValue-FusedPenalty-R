@@ -1,12 +1,12 @@
 # Load library
 library(dplyr)
 library(evd)         # fitting GPD
-library(POT)         # analisis Peaks Over Threshold
-library(ismev)       # perhitunganMLE GPD
-library(ggplot2)     # visualisasi
+library(POT)         # Peaks Over Threshold
+library(ismev)       # MLE GPD
+library(ggplot2)     # visualisation
 library(tidyr)
 library(glmnet)      # fused ridge regression
-library(VineCopula)  # pemodelan copula
+library(VineCopula)  # copula modeling
 library(copula)
 library(numDeriv)    # matriks Hessian
 library(MASS)        # ginv()
@@ -22,11 +22,11 @@ library(geosphere)   # distm/jarak euclidian
 library(GGally)      # plot korelasi antar lokasi
 library(nortest)     # uji A-D
 library(geostatsp)   # F-Madogram
-library(reshape2)    # korelasi Gaussian Copula
-library(corrplot)    # korelasi antar lokasi dengan data asli
-library(tseries)     # korelasi anatar data dalam 1 lokasi
+library(reshape2)    # Gaussian Copula
+library(corrplot)    # correlation location 
+library(tseries)     # correlation rainfall 
 library(fExtremes)   # extremal index
-library(maps)        # visualisasi maps
+library(maps)        # maps
 library(gstat)
 library(stars)
 library(stringr)
@@ -36,9 +36,9 @@ library(stringr)
 # =========================
 #          DATA
 # =========================
-data <- read.csv("D:/DontTouch!/KULEEYEEAHH SMT 7/CMEMEW/PENTING/Data CRHJN Sumut 14-24 Complete.csv")  
+data <- read.csv("Data RAINFALL Sumut 14-24 Complete.csv")  
 data <- data %>%
-  filter(Stasiun %in% c("FL Tobing", "Aek Gondang", "Kualanamu", "Maritim Belawan", "Binaka"))
+  filter(Station %in% c("FL Tobing", "Aek Gondang", "Kualanamu", "Maritim Belawan", "Binaka"))
 head(data)
 
 
